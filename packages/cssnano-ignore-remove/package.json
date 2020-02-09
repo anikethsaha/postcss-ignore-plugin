@@ -10,7 +10,7 @@
   "engines": {
     "node": ">=10.13.0"
   },
-    "files": [
+  "files": [
     "dist"
   ],
   "keywords": [
@@ -22,7 +22,6 @@
     "email": "anik220798@gmail.com"
   },
   "license": "ISC",
-  "devDependencies": {},
   "dependencies": {
     "postcss": "^7.0.16"
   }

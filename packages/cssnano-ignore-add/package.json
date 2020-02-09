@@ -22,7 +22,6 @@
     "email": "anik220798@gmail.com"
   },
   "license": "ISC",
-  "devDependencies": {},
   "dependencies": {
     "postcss": "^7.0.16"
   }
