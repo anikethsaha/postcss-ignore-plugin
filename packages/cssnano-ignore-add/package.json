@@ -10,8 +10,14 @@
   "engines": {
     "node": ">=10.13.0"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "cssnano",
+    "postcss"
+  ],
+  "author": {
+    "name": "anikethsaha",
+    "email": "anik220798@gmail.com"
+  },
   "license": "ISC",
   "devDependencies": {},
   "dependencies": {
