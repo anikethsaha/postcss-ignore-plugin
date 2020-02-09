@@ -1,6 +1,6 @@
-const postcss = require('postcss');
 const fs = require('fs');
 const path = require('path');
+const postcss = require('postcss');
 const plugin = require('..');
 
 function run(fixturename) {

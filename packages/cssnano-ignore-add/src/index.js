@@ -1,9 +1,9 @@
 import { plugin } from 'postcss';
 
-export default plugin('cssnano-ignore-add', (options = {}) => {
+export default plugin('cssnano-ignore-add', () => {
   return (root, result) => {
     const msgs = result.messages;
-    var declToAdd = [];
+    let declToAdd = [];
     msgs.forEach((msg) => {
       if (msg['cssnano-ignore-plugin'] !== undefined) {
         msg['cssnano-ignore-plugin'].forEach((ignoreData) => {

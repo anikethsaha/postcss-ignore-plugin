@@ -1,7 +1,7 @@
 import { plugin } from 'postcss';
 
-export default plugin('cssnano-ignore-remove', (options = {}) => {
-  var commentsIgnoredData = [];
+export default plugin('cssnano-ignore-remove', () => {
+  let commentsIgnoredData = [];
   // Work with options here
   return (root, result) => {
     // Transform CSS AST here
@@ -9,7 +9,7 @@ export default plugin('cssnano-ignore-remove', (options = {}) => {
       // Transform each rule here
       rule.walkComments((comment) => {
         if (comment.text === 'cssnano-ignore-line') {
-          var commentData = {
+          let commentData = {
             commentedLine: comment.source.start.line,
             ignoredLine: comment.source.start.line + 1,
           };
