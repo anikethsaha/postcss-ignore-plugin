@@ -2,7 +2,7 @@
 
 Ignore CSSNANO operations in lines using comments
 
-> ### This packages will be moved to CSSNANO soon once its ready to use
+> ### These packages will be moved to [`CSSNANO`](https://github.com/cssnano/cssnano) soon once its ready to use
 
 # Status
 
