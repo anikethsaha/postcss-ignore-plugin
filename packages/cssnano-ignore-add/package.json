@@ -1,0 +1,20 @@
+{
+  "name": "cssnano-ignore-add",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "prebuild": "del-cli dist",
+    "build": "cross-env  babel src --config-file ../../babel.config.js --out-dir dist --ignore \"**/__tests__/\""
+  },
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "postcss": "^7.0.16"
+  }
+}

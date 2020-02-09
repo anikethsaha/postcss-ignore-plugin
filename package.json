@@ -1,0 +1,31 @@
+{
+  "name": "cssnano-ignore-plugin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --cache --ignore-path .gitignore",
+    "fixlint": "yarn lint -- --fix",
+    "postinstall": "lerna bootstrap"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/node": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babel-eslint": "^10.0.3",
+    "cross-env": "^7.0.0",
+    "del-cli": "^3.0.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^25.1.0",
+    "lerna": "^3.20.2",
+    "postcss": "^7.0.26",
+    "postcss-cli": "^7.1.0"
+  }
+}
