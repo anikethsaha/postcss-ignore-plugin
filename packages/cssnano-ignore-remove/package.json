@@ -10,6 +10,9 @@
   "engines": {
     "node": ">=10.13.0"
   },
+    "files": [
+    "dist"
+  ],
   "keywords": [
     "cssnano",
     "postcss"
