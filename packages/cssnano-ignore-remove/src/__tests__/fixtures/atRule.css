@@ -1,0 +1,9 @@
+@media screen and (min-width: 480px) {
+  body {
+    background-color: lightgreen;
+  }
+  a {
+    /* cssnano-ignore-line */
+    color: red;
+  }
+}
