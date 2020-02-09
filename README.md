@@ -4,6 +4,34 @@ Ignore CSSNANO operations in lines using comments
 # Status
 > ### WORK IN PROGRESS :warning:
 
+# Getting started
+
+
+This will be soon ship with `cssnano default preset`. 
+In the meantime, install it using 
+
+` $ yarn add cssnano-ignore-add cssnano-ignore-remove -D`
+
+and add this it in your `postcss` config
+
+```js
+// postcss.config.js
+module.exports = {
+  plugins: [
+    require("cssnano-ignore-remove"),
+    require("cssnano"),
+    require("cssnano-ignore-add")
+  ]
+};
+```
+
+> This can be just with any of `postcss` plugin, not just with cssnano. But the comment will be same 
+>
+> ```css
+> /* cssnano-ignore-line */
+> ```
+
+
 
 # How it works
 In order to stop cssnano doing optimization on some particular line, you simply need to add `/* cssnano-ignore-line */` comment over that line.
