@@ -62,7 +62,7 @@ module.exports = {
     'import/no-mutable-exports': ['error'],
     'import/no-named-as-default': ['error'],
     'import/no-named-as-default-member': ['error'],
-    'import/order': ['error'],
+    'import/order': ['off'],
     'import/prefer-default-export': ['error'],
 
     // React
