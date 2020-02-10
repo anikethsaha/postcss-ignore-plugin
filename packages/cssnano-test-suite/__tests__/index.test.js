@@ -2,8 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import postcss from 'postcss';
 import cssnano from 'cssnano';
-import cssnanoIgnoreRemove from '../../cssnano-ignore-remove';
-import cssnanoIgnoreAdd from '../../cssnano-ignore-add';
+import cssnanoIgnoreRemove from '../../cssnano-ignore-remove/src';
+import cssnanoIgnoreAdd from '../../cssnano-ignore-add/src';
 
 function runWithDefaultPreset(fixturename) {
   it(
