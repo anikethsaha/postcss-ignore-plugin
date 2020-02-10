@@ -1,5 +1,7 @@
 # cssnano-ignore-plugin
 
+![CI tests](https://github.com/anikethsaha/cssnano-ignore-plugin/workflows/CI%20tests/badge.svg?branch=master&event=push)
+
 Ignore CSSNANO operations in lines using comments
 
 > ### These packages will be moved to [`CSSNANO`](https://github.com/cssnano/cssnano) soon once its ready to use
