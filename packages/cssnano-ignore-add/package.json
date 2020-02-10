@@ -1,6 +1,6 @@
 {
   "name": "cssnano-ignore-add",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Ignore CSSNANO operations in lines using comments",
   "main": "dist/index.js",
   "scripts": {
@@ -25,6 +25,5 @@
   "license": "ISC",
   "dependencies": {
     "postcss": "^7.0.16"
-  },
-  "devDependencies": {}
+  }
 }
