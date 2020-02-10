@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the snapshot for atRule 1`] = `
+"@media screen and (min-width: 480px) {
+  body {
+    background-color: lightgreen;
+    /* expects > width : 100% */
+    width: 100%;
+  }
+}
+"
+`;
+
+exports[`should match the snapshot for basic 1`] = `
+"ul li {
+  margin: auto;
+  /* expects > background-color : red */
+  background-color: red;
+}
+"
+`;

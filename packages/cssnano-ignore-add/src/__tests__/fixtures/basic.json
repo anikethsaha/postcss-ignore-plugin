@@ -1,0 +1,7 @@
+[
+  {
+    "selector": "ul li",
+    "prop": "background-color",
+    "value": "red"
+  }
+]

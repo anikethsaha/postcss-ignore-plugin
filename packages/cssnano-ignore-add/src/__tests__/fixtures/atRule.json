@@ -1,0 +1,11 @@
+[
+  {
+    "atRule": {
+      "name": "media",
+      "params": "screen and (min-width: 480px)"
+    },
+    "selector": "body",
+    "prop": "width",
+    "value": "100%"
+  }
+]
