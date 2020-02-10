@@ -25,5 +25,6 @@
   "dependencies": {
     "postcss": "^7.0.16"
   },
+  "repository": "anikethsaha/cssnano-ignore-plugin",
   "devDependencies": {}
 }

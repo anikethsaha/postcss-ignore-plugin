@@ -17,6 +17,7 @@
     "cssnano",
     "postcss"
   ],
+  "repository": "anikethsaha/cssnano-ignore-plugin",
   "author": {
     "name": "anikethsaha",
     "email": "anik220798@gmail.com"
