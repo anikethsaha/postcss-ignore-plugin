@@ -24,5 +24,6 @@
   "license": "ISC",
   "dependencies": {
     "postcss": "^7.0.16"
-  }
+  },
+  "devDependencies": {}
 }

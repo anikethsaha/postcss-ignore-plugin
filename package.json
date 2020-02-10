@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "description": "",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "lint": "eslint . --cache --ignore-path .gitignore",
     "fixlint": "yarn lint -- --fix",
     "postinstall": "lerna bootstrap",
     "publish": "lerna publish",
-    "test:only": "jest"
+    "test:only": "jest packages/cssnano-ignore-add packages/cssnano-ignore-remove",
+    "test:integration": "jest packages/cssnano-test-suite",
+    "build:fixtures:cssnano": "babel-node packages/cssnano-test-suite/__tests__/helper/buildFixtures.js"
   },
   "keywords": [],
   "author": "",
