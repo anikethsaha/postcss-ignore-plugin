@@ -1,6 +1,7 @@
 # cssnano-ignore-plugin
 
 ![CI tests](https://github.com/anikethsaha/cssnano-ignore-plugin/workflows/CI%20tests/badge.svg?branch=master&event=push)
+![CI Integration tests](https://github.com/anikethsaha/cssnano-ignore-plugin/workflows/CI%20Integration%20tests/badge.svg?branch=master&event=push)
 
 Ignore CSSNANO operations in lines using comments
 
