@@ -12,6 +12,7 @@
     "autoprefixer": "^9.7.4",
     "fs-extra": "^8.1.0",
     "postcss-preset-env": "^6.7.0",
-    "stylelint": "^13.2.0"
+    "stylelint": "^13.2.0",
+    "stylelint-config-standard": "^20.0.0"
   }
 }

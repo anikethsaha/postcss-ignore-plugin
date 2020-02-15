@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should ignore the cssnano-ignore-line comments for stylelint property-no-unknown.css 1`] = `
+Array [
+  Warning {
+    "column": 3,
+    "line": 2,
+    "node": Object {
+      "prop": "colr",
+      "raws": Object {
+        "before": "
+  ",
+        "between": ": ",
+      },
+      "source": Object {
+        "end": Object {
+          "column": 13,
+          "line": 2,
+        },
+        "input": Input {
+          "css": "a {
+  colr: blue;
+}
+a {
+  /* cssnano-ignore-line */
+  my-property: 1;
+}
+
+a {
+  color: green;
+}
+a {
+  fill: black;
+}
+a {
+  -moz-align-self: center;
+}
+a {
+  -webkit-align-self: center;
+}
+a {
+  align-self: center;
+}
+",
+          "hasBOM": false,
+          "id": "<input css 1>",
+        },
+        "start": Object {
+          "column": 3,
+          "line": 2,
+        },
+      },
+      "type": "decl",
+      "value": "blue",
+    },
+    "plugin": "stylelint",
+    "rule": "property-no-unknown",
+    "severity": "error",
+    "text": "Unexpected unknown property \\"colr\\" (property-no-unknown)",
+    "type": "warning",
+  },
+]
+`;
+
+exports[`should ignore the cssnano-ignore-line comments for stylelint unit-no-unknown.css 1`] = `
+Array [
+  Warning {
+    "column": 10,
+    "index": 7,
+    "line": 2,
+    "node": Object {
+      "prop": "width",
+      "raws": Object {
+        "before": "
+  ",
+        "between": ": ",
+      },
+      "source": Object {
+        "end": Object {
+          "column": 18,
+          "line": 2,
+        },
+        "input": Input {
+          "css": "a {
+  width: 10pixels;
+}
+a {
+  /* cssnano-ignore-line */
+  width: calc(10px + 10pixels);
+}
+
+p {
+  height: 10pixels;
+}
+
+a {
+  width: 10px;
+}
+a {
+  width: 10px;
+}
+a {
+  width: 10px;
+}
+a {
+  width: calc(10px + 10px);
+}
+",
+          "hasBOM": false,
+          "id": "<input css 2>",
+        },
+        "start": Object {
+          "column": 3,
+          "line": 2,
+        },
+      },
+      "type": "decl",
+      "value": "10pixels",
+    },
+    "plugin": "stylelint",
+    "rule": "unit-no-unknown",
+    "severity": "error",
+    "text": "Unexpected unknown unit \\"pixels\\" (unit-no-unknown)",
+    "type": "warning",
+  },
+  Warning {
+    "column": 11,
+    "index": 8,
+    "line": 10,
+    "node": Object {
+      "prop": "height",
+      "raws": Object {
+        "before": "
+  ",
+        "between": ": ",
+      },
+      "source": Object {
+        "end": Object {
+          "column": 19,
+          "line": 10,
+        },
+        "input": Input {
+          "css": "a {
+  width: 10pixels;
+}
+a {
+  /* cssnano-ignore-line */
+  width: calc(10px + 10pixels);
+}
+
+p {
+  height: 10pixels;
+}
+
+a {
+  width: 10px;
+}
+a {
+  width: 10px;
+}
+a {
+  width: 10px;
+}
+a {
+  width: calc(10px + 10px);
+}
+",
+          "hasBOM": false,
+          "id": "<input css 2>",
+        },
+        "start": Object {
+          "column": 3,
+          "line": 10,
+        },
+      },
+      "type": "decl",
+      "value": "10pixels",
+    },
+    "plugin": "stylelint",
+    "rule": "unit-no-unknown",
+    "severity": "error",
+    "text": "Unexpected unknown unit \\"pixels\\" (unit-no-unknown)",
+    "type": "warning",
+  },
+]
+`;

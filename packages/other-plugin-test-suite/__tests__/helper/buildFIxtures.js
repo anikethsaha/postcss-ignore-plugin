@@ -46,7 +46,7 @@ pluginLists.forEach((plugin) => {
     // its a local package , resolve it locally
     plugin = plugin.split('testplugins/')[1];
   }
-  console.log('plugin,pluginList', plugin, pluginPkg);
+
   fs.readdirSync(path.join(__dirname, `../fixtures/${plugin}/input`)).forEach(
     (fixturename) => {
       buildDefaultPresetFixtures(fixturename, plugin, pluginPkg);
