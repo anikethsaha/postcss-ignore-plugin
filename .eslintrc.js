@@ -1,5 +1,6 @@
 module.exports = {
   root: true,
+  ignorePatterns: ['*.css', 'node_modules/'],
   parser: 'babel-eslint',
   parserOptions: {
     sourceType: 'module',

@@ -10,8 +10,10 @@
     "postinstall": "lerna bootstrap",
     "publish": "lerna publish",
     "test:only": "jest packages/cssnano-ignore-add packages/cssnano-ignore-remove",
-    "test:integration": "jest packages/cssnano-test-suite",
-    "build:fixtures:cssnano": "babel-node packages/cssnano-test-suite/__tests__/helper/buildFixtures.js"
+    "test:integration": "jest packages/cssnano-test-suite packages/other-plugin-test-suite ",
+    "build:integrations": "npm run build:fixtures:cssnano && npm run build:fixtures:others",
+    "build:fixtures:cssnano": "babel-node packages/cssnano-test-suite/__tests__/helper/buildFixtures.js",
+    "build:fixtures:others": "babel-node packages/other-plugin-test-suite/__tests__/helper/buildFixtures.js"
   },
   "keywords": [],
   "author": "",
