@@ -5,6 +5,6 @@
       "ignoreChanges": ["package-lock.json"]
     }
   },
-  "packages": ["packages/cssnano-ignore-*"],
+  "packages": ["packages/*"],
   "version": "independent"
 }
