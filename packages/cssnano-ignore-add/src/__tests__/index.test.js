@@ -18,7 +18,7 @@ function run(fixturename, data = []) {
         helperPlugin({ data }),
         plugin.default(),
       ]).process(input, { from: undefined });
-
+      // console.log('result.css', result.css);
       expect(result.css).toMatchSnapshot();
 
       done();

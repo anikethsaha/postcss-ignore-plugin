@@ -5,8 +5,10 @@ module.exports = postcss.plugin(
   (options = { data: [] }) => {
     const { data } = options;
     return (root, result) => {
+      const pluginHolder = 'cssnano-ignore-plugin';
+      result.messages.type = pluginHolder;
       result.messages.push({
-        'cssnano-ignore-plugin': data, //  Array<Object>
+        [pluginHolder]: data, //  Array<Object>
       });
     };
   }

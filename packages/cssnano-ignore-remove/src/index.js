@@ -38,7 +38,7 @@ export default plugin('cssnano-ignore-remove', () => {
       });
     });
 
-    result.message.type = 'cssnano-ignore-plugin';
+    result.messages.type = 'cssnano-ignore-plugin';
     result.messages.push({
       'cssnano-ignore-plugin': commentsIgnoredData,
     });
