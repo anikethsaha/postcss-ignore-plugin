@@ -7,11 +7,11 @@ Ignore CSSNANO operations in lines using comments
 
 > ### These packages will be moved to [`CSSNANO`](https://github.com/cssnano/cssnano) soon once its ready to use
 
-# Status
+## Status
 
 > ### WORK IN PROGRESS :warning:
 
-# Getting started
+## Getting started
 
 This will be soon ship with `cssnano default preset`.
 In the meantime, install it using
@@ -37,7 +37,7 @@ module.exports = {
 > /* cssnano-ignore-line */
 > ```
 
-# How it works
+## How it works
 
 In order to stop cssnano doing optimization on some particular line, you simply need to add `/* cssnano-ignore-line */` comment over that line.
 Currently we support only for declaration statement, that mean you can add this comment over CSS declaration line not over the selector list in Rule declaration
@@ -71,9 +71,22 @@ Currently we support only for declaration statement, that mean you can add this 
 
 It simple remove the next line before running the cssnano plugins and then add them at the end.
 
-# Packages
+## Packages
 
 It contains two packages, one to remove the line and another to add it .
 
 - [`cssnano-ignore-remove`](#cssnano-ignore-remove)
 - [`cssnano-ignore-add`](#cssnano-ignore-add)
+
+## Tests
+
+this plugins are tested with
+
+- cssnano
+- Autoprefixer
+- postcss-preset-env
+- stylelint
+- some custom plugins meant to fail the op
+- Indivial tests for each plugins
+
+> There are not many test cases. More will be added soon
