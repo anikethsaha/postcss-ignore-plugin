@@ -4,6 +4,10 @@ export default plugin('cssnano-ignore-add', () => {
   return (root, result) => {
     const msgs = result.messages;
     let declToAdd = [];
+    if (result.messages.type !== 'cssnano-ignore-plugin') {
+      return;
+    }
+
     msgs.forEach((msg) => {
       if (msg['cssnano-ignore-plugin'] !== undefined) {
         msg['cssnano-ignore-plugin'].forEach((ignoreData) => {
