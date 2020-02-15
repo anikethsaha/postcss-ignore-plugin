@@ -1,6 +1,6 @@
 {
   "name": "cssnano-ignore-remove",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Ignore CSSNANO operations in lines using comments",
   "main": "dist/index.js",
   "scripts": {
