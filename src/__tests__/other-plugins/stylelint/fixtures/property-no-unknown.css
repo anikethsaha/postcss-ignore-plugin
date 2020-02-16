@@ -1,0 +1,23 @@
+a {
+  colr: blue;
+}
+a {
+  /* postcss-ignore-line */
+  my-property: 1;
+}
+
+a {
+  color: green;
+}
+a {
+  fill: black;
+}
+a {
+  -moz-align-self: center;
+}
+a {
+  -webkit-align-self: center;
+}
+a {
+  align-self: center;
+}

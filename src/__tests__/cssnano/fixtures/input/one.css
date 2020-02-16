@@ -1,0 +1,14 @@
+h1 {
+  font: bold 2.2rem/0.9 'Open Sans Condensed', sans-serif;
+}
+
+p {
+  /* postcss-ignore-line */
+  font-family: 'Helvetica Neue', Arial, sans-serif, Helvetica;
+  font-weight: normal;
+}
+
+h1 {
+  /* postcss-ignore-line */
+  transform: rotate3d(0, 0, 1, 20deg);
+}

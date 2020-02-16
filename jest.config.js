@@ -5,4 +5,5 @@ module.exports = {
     '/helper/',
     '/testplugins/',
   ],
+  testMatch: ['**/*.test.js'],
 };

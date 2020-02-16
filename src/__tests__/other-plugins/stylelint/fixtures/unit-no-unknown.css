@@ -1,0 +1,24 @@
+a {
+  width: 10pixels;
+}
+a {
+  /* postcss-ignore-line */
+  width: calc(10px + 10pixels);
+}
+
+p {
+  height: 10pixels;
+}
+
+a {
+  width: 10px;
+}
+a {
+  width: 10px;
+}
+a {
+  width: 10px;
+}
+a {
+  width: calc(10px + 10px);
+}

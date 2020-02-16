@@ -1,39 +1,56 @@
 {
-  "name": "cssnano-ignore-plugin",
-  "version": "1.0.0",
-  "private": true,
-  "description": "",
-  "main": "",
+  "name": "postcss-ignore",
+  "version": "0.1.0",
+  "description": "ignore postcss process for a rule using postcss-ignore comment",
   "scripts": {
     "lint": "eslint . --cache --ignore-path .gitignore",
     "fixlint": "yarn lint -- --fix",
-    "postinstall": "lerna bootstrap",
-    "publish": "lerna publish",
-    "test:only": "jest packages/cssnano-ignore-add packages/cssnano-ignore-remove",
-    "test:integration": "jest packages/cssnano-test-suite packages/other-plugin-test-suite ",
+    "build": "babel src --config-file ./babel.config.js --out-dir dist --ignore \"**/__tests__/**\"",
+    "test:only": "jest src/__tests__/remove src/__tests__/add",
+    "test:integrations": "jest src/__tests__/cssnano src/__tests__/other-plugins",
     "build:integrations": "npm run build:fixtures:cssnano && npm run build:fixtures:others",
-    "build:fixtures:cssnano": "babel-node packages/cssnano-test-suite/__tests__/helper/buildFixtures.js",
-    "build:fixtures:others": "babel-node packages/other-plugin-test-suite/__tests__/helper/buildFixtures.js"
+    "build:fixtures:cssnano": "babel-node src/__tests__/cssnano/helper/buildFixtures.js",
+    "build:fixtures:others": "babel-node src/__tests__/other-plugins/helper/buildFixtures.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "postcss-plugin",
+    "ignore",
+    "postcss"
+  ],
+  "files": [
+    "dist"
+  ],
+  "repository": "anikethsaha/postcss-ignore",
+  "author": {
+    "name": "anikethsaha",
+    "email": "anik220798@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "postcss": "^7.0.16"
+  },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
     "@babel/node": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
+    "autoprefixer": "^9.7.4",
     "babel-eslint": "^10.0.3",
     "cross-env": "^7.0.0",
+    "cssnano": "^4.1.10",
     "del-cli": "^3.0.0",
     "eslint": "^6.8.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.3",
+    "fs-extra": "^8.1.0",
     "jest": "^25.1.0",
     "lerna": "^3.20.2",
     "postcss": "^7.0.26",
     "postcss-cli": "^7.1.0",
-    "prettier": "^1.19.1"
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^1.19.1",
+    "stylelint": "^13.2.0",
+    "stylelint-config-standard": "^20.0.0"
   }
 }
