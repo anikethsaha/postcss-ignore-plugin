@@ -1,11 +1,9 @@
-# cssnano-ignore-plugin
+# postcss-ignore
 
-![CI tests](https://github.com/anikethsaha/cssnano-ignore-plugin/workflows/CI%20tests/badge.svg?branch=master&event=push)
-![CI Integration tests](https://github.com/anikethsaha/cssnano-ignore-plugin/workflows/CI%20Integration%20tests/badge.svg?branch=master&event=push)
+![CI tests](https://github.com/anikethsaha/postcss-ignore/workflows/CI%20tests/badge.svg?branch=master&event=push)
+![CI Integration tests](https://github.com/anikethsaha/postcss-ignore/workflows/CI%20Integration%20tests/badge.svg?branch=master&event=push)
 
-Ignore CSSNANO operations in lines using comments
-
-> ### These packages will be moved to [`CSSNANO`](https://github.com/cssnano/cssnano) soon once its ready to use
+Ignore postcss plugins operations in lines using comments
 
 ## Status
 
@@ -13,10 +11,9 @@ Ignore CSSNANO operations in lines using comments
 
 ## Getting started
 
-This will be soon ship with `cssnano default preset`.
-In the meantime, install it using
 
-`$ yarn add cssnano-ignore-add cssnano-ignore-remove -D`
+
+`$ yarn add postcss-ignore -D`
 
 and add this it in your `postcss` config
 
@@ -24,22 +21,23 @@ and add this it in your `postcss` config
 // postcss.config.js
 module.exports = {
   plugins: [
-    require('cssnano-ignore-remove'),
+    require('postcss-ignore/remove'), // Important to keep this at the top of the plugins
     require('cssnano'),
-    require('cssnano-ignore-add'),
+    require('autoprefixer'),
+    require('stylelint'),
+    require('postcss-ignore/remove'), // Important to keep it at the end
   ],
 };
 ```
 
-> This can be just with any of `postcss` plugin, not just with cssnano. But the comment will be same
->
-> ```css
-> /* cssnano-ignore-line */
-> ```
+Now use the following comments whenever you want to ignore any operation for other plugins
+
+```css
+ /* postcss-ignore-line */
+```
 
 ## How it works
 
-In order to stop cssnano doing optimization on some particular line, you simply need to add `/* cssnano-ignore-line */` comment over that line.
 Currently we support only for declaration statement, that mean you can add this comment over CSS declaration line not over the selector list in Rule declaration
 
 `example`
@@ -49,19 +47,19 @@ Currently we support only for declaration statement, that mean you can add this 
 
 .classname {
   margin: auto;
-  /* cssnano-ignore-line */
+  /* postcss-ignore-line */
   color: red;
 }
 
-// Wrong example
+// Not supported yet
 
-/* cssnano-ignore-line */
+/* postcss-ignore-line */     
 .classname {
   margin: auto;
   color: red;
 }
 
-/* cssnano-ignore-line */
+/* postcss-ignore-line */
 @media screen and (min-width: 480px) {
   ul {
     list-style: none;
@@ -69,14 +67,7 @@ Currently we support only for declaration statement, that mean you can add this 
 }
 ```
 
-It simple remove the next line before running the cssnano plugins and then add them at the end.
-
-## Packages
-
-It contains two packages, one to remove the line and another to add it .
-
-- [`cssnano-ignore-remove`](#cssnano-ignore-remove)
-- [`cssnano-ignore-add`](#cssnano-ignore-add)
+It simple remove the next line before running the other plugins and then add them at the end.
 
 ## Tests
 
