@@ -1,6 +1,6 @@
 name: CI Integration tests
 
-on: 
+on:
   push:
    branches:
     - master
@@ -25,4 +25,4 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - run: npm run lint
-    - run: npm run test:integration
+    - run: npm run test:integrations
