@@ -67,6 +67,10 @@ Currently we support only for declaration statement, that mean you can add this 
 
 It simple remove the next line before running the other plugins and then add them at the end.
 
+## Rules
+
+Use [`stylelint-postcss-ignore`](https://github.com/anikethsaha/stylelint-postcss-ignore) for rules regarding this plugin 's better use
+
 ## Tests
 
 this plugins are tested with
