@@ -23,7 +23,7 @@ module.exports = {
     require('cssnano'),
     require('autoprefixer'),
     require('stylelint'),
-    require('postcss-ignore-plugin/remove'), // Important to keep it at the end
+    require('postcss-ignore-plugin/add'), // Important to keep it at the end
   ],
 };
 ```
