@@ -31,7 +31,7 @@ module.exports = {
 Now use the following comments whenever you want to ignore any operation for other plugins
 
 ```css
-/* postcss-ignore-plugin-line */
+/* postcss-ignore-line */
 ```
 
 ## How it works
@@ -45,19 +45,19 @@ Currently we support only for declaration statement, that mean you can add this 
 
 .classname {
   margin: auto;
-  /* postcss-ignore-plugin-line */
+  /* postcss-ignore-line */
   color: red;
 }
 
 // Not supported yet
 
-/* postcss-ignore-plugin-line */
+/* postcss-ignore-line */
 .classname {
   margin: auto;
   color: red;
 }
 
-/* postcss-ignore-plugin-line */
+/* postcss-ignore-line */
 @media screen and (min-width: 480px) {
   ul {
     list-style: none;
