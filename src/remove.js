@@ -1,6 +1,6 @@
 import { plugin } from 'postcss';
 
-export default plugin('postcss-ignore-remove', () => {
+export default plugin('postcss-ignore-plugin-remove', () => {
   let commentsIgnoredData = [];
   // Work with options here
   return (root, result) => {
@@ -38,9 +38,9 @@ export default plugin('postcss-ignore-remove', () => {
       });
     });
 
-    result.messages.type = 'postcss-ignore';
+    result.messages.type = 'postcss-ignore-plugin';
     result.messages.push({
-      'postcss-ignore': commentsIgnoredData,
+      'postcss-ignore-plugin': commentsIgnoredData,
     });
   };
 });

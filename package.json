@@ -1,5 +1,5 @@
 {
-  "name": "postcss-ignore",
+  "name": "postcss-ignore-plugin",
   "version": "0.1.0",
   "description": "ignore postcss process for a rule using postcss-ignore comment",
   "scripts": {
@@ -20,7 +20,7 @@
   "files": [
     "dist"
   ],
-  "repository": "anikethsaha/postcss-ignore",
+  "repository": "anikethsaha/postcss-ignore-plugin",
   "author": {
     "name": "anikethsaha",
     "email": "anik220798@gmail.com"

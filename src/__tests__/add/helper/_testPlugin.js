@@ -5,7 +5,7 @@ module.exports = postcss.plugin(
   (options = { data: [] }) => {
     const { data } = options;
     return (root, result) => {
-      const pluginHolder = 'postcss-ignore';
+      const pluginHolder = 'postcss-ignore-plugin';
       result.messages.type = pluginHolder;
       result.messages.push({
         [pluginHolder]: data, //  Array<Object>

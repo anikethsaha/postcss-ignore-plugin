@@ -1,16 +1,16 @@
 import { plugin } from 'postcss';
 
-export default plugin('postcss-ignore-add', () => {
+export default plugin('postcss-ignore-plugin-add', () => {
   return (root, result) => {
-    if (result.messages.type !== 'postcss-ignore') {
+    if (result.messages.type !== 'postcss-ignore-plugin') {
       return;
     }
 
     const msgs = result.messages;
     let declToAdd = [];
     msgs.forEach((msg) => {
-      if (msg['postcss-ignore'] !== undefined) {
-        msg['postcss-ignore'].forEach((ignoreData) => {
+      if (msg['postcss-ignore-plugin'] !== undefined) {
+        msg['postcss-ignore-plugin'].forEach((ignoreData) => {
           declToAdd.push(ignoreData);
         });
       }
