@@ -28,7 +28,6 @@
 }
 
 .example {
-  /* postcss-ignore-line */
   transition: all 0.5s;
   -webkit-user-select: none;
      -moz-user-select: none;

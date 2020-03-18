@@ -1,0 +1,10 @@
+.class{width:calc(-25rem - 640px - 50vw)}:host(custom-element){width:200px;height:40px;background:red}.box {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 40px;
+}custom-element {
+  width: 200px;
+  height: 40px;
+  background: red;
+}

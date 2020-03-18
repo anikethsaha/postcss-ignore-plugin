@@ -1,0 +1,66 @@
+{
+  "ignoredLineData": [],
+  "ignoreRulesData": [
+    {
+      "rule": {
+        "raws": {
+          "before": "",
+          "between": " ",
+          "semicolon": true,
+          "after": "\n"
+        },
+        "type": "rule",
+        "nodes": [
+          {
+            "raws": {
+              "before": "\n  ",
+              "between": ": "
+            },
+            "type": "decl",
+            "source": {
+              "start": {
+                "line": 2,
+                "column": 3
+              },
+              "input": {
+                "css": "ul li {\n  padding: 5px;\n}",
+                "hasBOM": false,
+                "id": "<input css 706>"
+              },
+              "end": {
+                "line": 2,
+                "column": 15
+              }
+            },
+            "prop": "padding",
+            "value": "5px"
+          }
+        ],
+        "source": {
+          "start": {
+            "line": 1,
+            "column": 1
+          },
+          "input": {
+            "css": "ul li {\n  padding: 5px;\n}",
+            "hasBOM": false,
+            "id": "<input css 706>"
+          },
+          "end": {
+            "line": 3,
+            "column": 1
+          }
+        },
+        "selector": "ul li",
+        "lastEach": 5,
+        "indexes": {}
+      },
+      "parent": {
+        "type": "root",
+        "nodes": [],
+        "lastEach": 4,
+        "indexes": {}
+      }
+    }
+  ]
+}

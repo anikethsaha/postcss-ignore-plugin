@@ -105,6 +105,11 @@ a {
 a {
   width: calc(10px + 10px);
 }
+
+/* postcss-ignore */
+html {
+  height: 100ppxx;
+}
 ",
           "hasBOM": false,
           "id": "<input css 2>",
@@ -163,6 +168,11 @@ a {
 }
 a {
   width: calc(10px + 10px);
+}
+
+/* postcss-ignore */
+html {
+  height: 100ppxx;
 }
 ",
           "hasBOM": false,

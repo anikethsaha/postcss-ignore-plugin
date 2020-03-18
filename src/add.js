@@ -7,16 +7,21 @@ export default plugin('postcss-ignore-plugin-add', () => {
     }
 
     const msgs = result.messages;
-    let declToAdd = [];
+    let declToAdd = [],
+      rulesToAdd = [];
+
     msgs.forEach((msg) => {
       if (msg['postcss-ignore-plugin'] !== undefined) {
-        msg['postcss-ignore-plugin'].forEach((ignoreData) => {
+        msg['postcss-ignore-plugin'].ignoredLineData.forEach((ignoreData) => {
           declToAdd.push(ignoreData);
+        });
+        msg['postcss-ignore-plugin'].ignoreRulesData.forEach((ignoredRule) => {
+          rulesToAdd.push(ignoredRule);
         });
       }
     });
 
-    // add the atrules
+    // add decl to  atrules
     root.walkAtRules((atRules) => {
       declToAdd.forEach((decl) => {
         if (
@@ -36,7 +41,7 @@ export default plugin('postcss-ignore-plugin-add', () => {
       });
     });
 
-    // add only those with no atrules
+    // add decl only those with no atrules
     root.walkRules((rules) => {
       declToAdd.forEach((decl) => {
         if (rules.selector === decl.selector && decl.atRule === undefined) {
@@ -45,6 +50,26 @@ export default plugin('postcss-ignore-plugin-add', () => {
             value: decl.value,
           });
         }
+      });
+    });
+
+    // add rules
+    rulesToAdd = rulesToAdd.filter((rule) => {
+      if (rule.parent.type !== 'atrule') {
+        root.append(rule.rule);
+        return false;
+      }
+      return true;
+    });
+
+    // add rules to artules
+    root.walkAtRules((atrule) => {
+      rulesToAdd = rulesToAdd.filter((rule) => {
+        if (atrule.params === rule.parent.params) {
+          atrule.append(rule.rule);
+          return false;
+        }
+        return true;
       });
     });
   };
