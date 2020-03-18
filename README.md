@@ -5,10 +5,6 @@
 
 Ignore postcss plugins operations in lines using comments
 
-**Contribute to make it production ready**
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/anikethsaha/postcss-ignore-plugin)
-
 ## Getting started
 
 `$ yarn add postcss-ignore-plugin -D`
@@ -108,3 +104,21 @@ this plugins are tested with
 - **Does it effect the performance like the build time?**
 
   Yes _(sometimes for code with many ignore comments )_, but not at a huge level. It slightly decreases the performance as there are 2-3 nested looks so you can notices some issue with huge code with many ignore comments
+
+## Contributing Guidelines
+
+Simply click on this
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/anikethsaha/postcss-ignore-plugin)
+
+and starting working in it !
+
+**OR**
+
+- clone the repo
+- Install the dependenices `yarn install`
+- Build the code `yarn build`
+- run the tests before working `yarn test:only` and `yarn test:integrations`
+- start working
+
+If you add a new feature or did some breaking change , update [`stylelint-postcss-ignore`](https://github.com/anikethsaha/stylelint-postcss-ignore) for consistency
