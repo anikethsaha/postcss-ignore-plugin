@@ -1,6 +1,6 @@
 {
   "name": "postcss-ignore-plugin",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "ignore postcss process for a rule using postcss-ignore comment",
   "scripts": {
     "lint": "eslint . --cache --ignore-path .gitignore",
