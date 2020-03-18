@@ -19,3 +19,68 @@ exports[`should match the snapshot for basic 1`] = `
 }
 "
 `;
+
+exports[`should match the snapshot for rules 1`] = `
+"/*
+expects this at last
+ul li {
+  padding: 5px;
+}
+ */
+
+a {
+  color: red;
+}
+
+p {
+  padding: 10px;
+}
+
+/* postcss-ignore */
+h1 {
+  height: 1;
+}
+
+#main {
+  /* postcss-ignore */
+  border: 1px solid black;
+}
+
+ul li {
+  padding: 5px;
+}
+"
+`;
+
+exports[`should match the snapshot for rulesInAtRules 1`] = `
+"@media screen and (min-width: 900px) {
+  /* postcss-ignore */
+  article {
+    display: flex;
+  }
+
+  article {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    padding: 1rem 3rem;
+  }
+}
+
+@document url(\\"https://www.example.com/\\") {
+  h1 {
+    color: green;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  html {
+    /* postcss-ignore */
+    padding: 1rem 3rem;
+  }
+}
+"
+`;

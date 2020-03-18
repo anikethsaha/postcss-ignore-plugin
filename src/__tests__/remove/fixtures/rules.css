@@ -1,0 +1,22 @@
+/* postcss-ignore */
+ul li {
+  padding: 5px;
+}
+
+a {
+  color: red;
+}
+
+p {
+  padding: 10px;
+}
+
+/* postcss-ignore */
+h1 {
+  height: 1;
+}
+
+#main {
+  /* postcss-ignore */
+  border: 1px solid black;
+}

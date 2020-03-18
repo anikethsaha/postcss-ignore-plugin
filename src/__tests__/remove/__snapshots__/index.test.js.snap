@@ -6,7 +6,6 @@ exports[`should match the snapshot for atRule 1`] = `
     background-color: lightgreen;
   }
   a {
-    /* postcss-ignore-line */
   }
 }
 "
@@ -15,8 +14,45 @@ exports[`should match the snapshot for atRule 1`] = `
 exports[`should match the snapshot for basic 1`] = `
 "#main,
 ul li {
-  /* postcss-ignore-line */
   margin: auto;
+}
+"
+`;
+
+exports[`should match the snapshot for rules 1`] = `
+"a {
+  color: red;
+}
+
+p {
+  padding: 10px;
+}
+
+#main {
+  border: 1px solid black;
+}
+"
+`;
+
+exports[`should match the snapshot for rulesInAtRules 1`] = `
+"@media screen and (min-width: 900px) {
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    padding: 1rem 3rem;
+  }
+}
+@document url(\\"https://www.example.com/\\") {
+  h1 {
+    color: green;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  html {
+    padding: 1rem 3rem;
+  }
 }
 "
 `;

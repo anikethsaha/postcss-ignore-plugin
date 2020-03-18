@@ -35,9 +35,19 @@ module.exports = {
 
 Now use the following comments whenever you want to ignore any operation for other plugins
 
-```css
-/* postcss-ignore-line */
-```
+- for ignoring a particular line or declaration (css properties) inside of css rule
+
+  ```css
+  /* postcss-ignore-line */
+  ```
+
+  > Dont use `/* postcss-ignore-line */` for css rules
+
+- for ignoring a whole rule
+
+  ```css
+  /* postcss-ignore */
+  ```
 
 ## How it works
 
@@ -46,26 +56,27 @@ Currently we support only for declaration statement, that mean you can add this 
 `example`
 
 ```css
-// Correct example
-
 .classname {
   margin: auto;
   /* postcss-ignore-line */
   color: red;
 }
 
-// Not supported yet
-
-/* postcss-ignore-line */
+/* postcss-ignore */
 .classname {
   margin: auto;
   color: red;
 }
 
-/* postcss-ignore-line */
 @media screen and (min-width: 480px) {
   ul {
+    /* postcss-ignore-line */
     list-style: none;
+  }
+
+  /* postcss-ignore */
+  p {
+    font-size: 10px;
   }
 }
 ```
@@ -88,3 +99,17 @@ this plugins are tested with
 - Indivial tests for each plugins
 
 > There are not many test cases. More will be added soon
+
+## FAQ
+
+- **Can we ignore a whole css `atrules` (like media queries) ?**
+
+  No, you need to use `/* postcss-ignore */` before each rule inside the `atrules`
+
+- **will those ignore rules/properties (declarations) will come back to there original position after all operations?**
+
+  No, both. rules and atrules will append at the end. declarations (rules's properties) will append at the rule itself. and if you have used `/* postcss-ignore */` for a rule inside of atrules, it will get appended for that atrule at the end
+
+- **Does it effect the performance like the build time?**
+
+  Yes _(sometimes for code with many ignore comments )_, but not at a huge level. It slightly decreases the performance as there are 2-3 nested looks so you can notices some issue with huge code with many ignore comments

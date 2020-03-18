@@ -1,0 +1,24 @@
+/* postcss-ignore */
+.box {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 40px;
+}
+
+.class {
+  width: calc(-25rem - (1280px - 100vw) * 0.5);
+}
+
+:host(custom-element) {
+  width: 200px;
+  height: 40px;
+  background: red;
+}
+
+/* postcss-ignore */
+custom-element {
+  width: 200px;
+  height: 40px;
+  background: red;
+}

@@ -1,0 +1,140 @@
+{
+  "ignoredLineData": [],
+  "ignoreRulesData": [
+    {
+      "rule": {
+        "raws": {
+          "before": "\n\n  ",
+          "between": " ",
+          "semicolon": true,
+          "after": "\n  "
+        },
+        "type": "rule",
+        "nodes": [
+          {
+            "raws": {
+              "before": "\n    ",
+              "between": ": "
+            },
+            "type": "decl",
+            "source": {
+              "start": {
+                "line": 4,
+                "column": 5
+              },
+              "input": {
+                "css": "@media screen and (min-width: 900px) {\n\n  article {\n    display: flex;\n  }\n}",
+                "hasBOM": false,
+                "id": "<input css 712>"
+              },
+              "end": {
+                "line": 4,
+                "column": 18
+              }
+            },
+            "prop": "display",
+            "value": "flex"
+          }
+        ],
+        "source": {
+          "start": {
+            "line": 3,
+            "column": 3
+          },
+          "input": {
+            "css": "@media screen and (min-width: 900px) {\n\n  article {\n    display: flex;\n  }\n}",
+            "hasBOM": false,
+            "id": "<input css 712>"
+          },
+          "end": {
+            "line": 5,
+            "column": 3
+          }
+        },
+        "selector": "article"
+      },
+      "parent": {
+        "raws": {
+          "before": "",
+          "between": " ",
+          "afterName": " ",
+          "semicolon": false,
+          "after": "\n"
+        },
+        "type": "atrule",
+        "name": "media",
+        "source": {
+          "start": {
+            "line": 1,
+            "column": 1
+          },
+          "input": {
+            "css": "@media screen and (min-width: 900px) {\n\n  article {\n    display: flex;\n  }\n}",
+            "hasBOM": false,
+            "id": "<input css 712>"
+          },
+          "end": {
+            "line": 6,
+            "column": 1
+          }
+        },
+        "params": "screen and (min-width: 900px)",
+        "nodes": [
+          {
+            "raws": {
+              "before": "\n\n  ",
+              "between": " ",
+              "semicolon": true,
+              "after": "\n  "
+            },
+            "type": "rule",
+            "nodes": [
+              {
+                "raws": {
+                  "before": "\n    ",
+                  "between": ": "
+                },
+                "type": "decl",
+                "source": {
+                  "start": {
+                    "line": 4,
+                    "column": 5
+                  },
+                  "input": {
+                    "css": "@media screen and (min-width: 900px) {\n\n  article {\n    display: flex;\n  }\n}",
+                    "hasBOM": false,
+                    "id": "<input css 712>"
+                  },
+                  "end": {
+                    "line": 4,
+                    "column": 18
+                  }
+                },
+                "prop": "display",
+                "value": "flex"
+              }
+            ],
+            "source": {
+              "start": {
+                "line": 3,
+                "column": 3
+              },
+              "input": {
+                "css": "@media screen and (min-width: 900px) {\n\n  article {\n    display: flex;\n  }\n}",
+                "hasBOM": false,
+                "id": "<input css 712>"
+              },
+              "end": {
+                "line": 5,
+                "column": 3
+              }
+            },
+            "selector": "article"
+          }
+        ],
+        "lastEach": 3,
+        "indexes": {}
+      }
+    }
+  ]
+}

@@ -1,7 +1,10 @@
-[
-  {
-    "selector": "ul li",
-    "prop": "background-color",
-    "value": "red"
-  }
-]
+{
+  "ignoreRulesData": [],
+  "ignoredLineData": [
+    {
+      "selector": "ul li",
+      "prop": "background-color",
+      "value": "red"
+    }
+  ]
+}

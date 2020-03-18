@@ -1,7 +1,9 @@
 import { plugin } from 'postcss';
 
 export default plugin('postcss-ignore-plugin-remove', () => {
-  let commentsIgnoredData = [];
+  let ignoredLineData = [];
+  let commentsIgnoredRule = [];
+  let ignoreRulesData = [];
   // Work with options here
   return (root, result) => {
     // Transform CSS AST here
@@ -13,14 +15,24 @@ export default plugin('postcss-ignore-plugin-remove', () => {
             commentedLine: comment.source.start.line,
             ignoredLine: comment.source.start.line + 1,
           };
-          commentsIgnoredData.push(commentData);
+          comment.remove();
+          ignoredLineData.push(commentData);
         }
       });
+    });
+    root.walkComments((comment) => {
+      if (comment.text === 'postcss-ignore') {
+        commentsIgnoredRule.push({
+          commentLine: comment.source.start,
+          ruleIgnoreLineNo: comment.source.start.line + 1,
+        });
+        comment.remove();
+      }
     });
     root.walkRules((rule) => {
       rule.walkDecls((decl) => {
         const declLine = decl.source.start.line;
-        commentsIgnoredData.forEach((ignoreData) => {
+        ignoredLineData.forEach((ignoreData) => {
           if (ignoreData.ignoredLine === declLine) {
             ignoreData.selector = decl.parent.selector;
 
@@ -36,11 +48,17 @@ export default plugin('postcss-ignore-plugin-remove', () => {
           }
         });
       });
+      commentsIgnoredRule.forEach((data) => {
+        if (rule.source.start.line === data.ruleIgnoreLineNo) {
+          ignoreRulesData.push({ rule, parent: rule.parent });
+          rule.remove();
+        }
+      });
     });
 
     result.messages.type = 'postcss-ignore-plugin';
     result.messages.push({
-      'postcss-ignore-plugin': commentsIgnoredData,
+      'postcss-ignore-plugin': { ignoredLineData, ignoreRulesData },
     });
   };
 });
