@@ -20,6 +20,7 @@
   "files": [
     "dist"
   ],
+  "main": "dist",
   "repository": "anikethsaha/postcss-ignore-plugin",
   "author": {
     "name": "anikethsaha",
